@@ -1,0 +1,43 @@
+.admin {
+    padding-top: 10px;
+}
+
+.admin h1 {
+    color: rgb(155, 121, 96);
+}
+
+.admin .prods,
+.admin .cpns {
+    border: 1px solid #231ea1;
+    border-radius: 4px;
+    background-color: #191317;
+    padding: 20px;
+    text-align: left;
+}
+
+.admin h5 {
+    text-align: center;
+}
+
+.admin label {
+    margin-top: 10px;
+}
+
+.admin .parent {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.admin .prods {
+    width: 500px;
+}
+
+.admin .cpns {
+    width: 500px;
+}
+
+.admin .controls {
+    margin-top: 12px;
+    text-align: center;
+}

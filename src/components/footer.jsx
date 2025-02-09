@@ -1,7 +1,7 @@
 import "./footer.css";
 
 
-function Footer(){
+function Footer() {
     return(
         <div className="footer">
             <h4> Created by: LaVonde Dunigan</h4>

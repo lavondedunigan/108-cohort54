@@ -1,0 +1,13 @@
+
+.about {
+    padding-top: 20px;
+}
+
+.about h1 {
+    color: rgb(105, 111, 83);
+}
+
+.about h5 {
+    color: black;
+    font-family: "Segoe UI, sans-serif";
+}

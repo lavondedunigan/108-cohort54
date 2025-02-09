@@ -17,10 +17,10 @@ const catalog = [
         _id: "344561"
     },
     {
-        "title": "Lilly",
-        "image": "/images/lilly.jpg",
+        "title": "Miracle Grow",
+        "image": "/images/miracle grow.jpg",
         "price": 11.70,
-        "category": "flowers",
+        "category": "plant food",
         _id: "hxckskc"
     },
     {
@@ -50,13 +50,13 @@ const catalog = [
 ];
 
 
-const categories = ["flowers","vases", "seeds", "scissors", "miracle grow", "soil","plant food"];
+const categories = ["flowers","vases", "plant food", "miracle grow", "soil","seeds"];
 
 
 function Catalog() {
     return (
         <div className="catalog page">
-            <h1>Check our fresh products.</h1>
+            <h1>Check our flowers and products.</h1>
 
             <div className="filters">
                 {categories.map(cat => <button className="btn btn-sm btn-outline-success">{cat}</button> ) }
