@@ -6,48 +6,55 @@ function Admin() {
       <h1>Store Administration</h1>
 
       <div className="parent">
-          <h5> Manage Products</h5>
-        </div>
+        <div className="prods">
+        <h5> Manage Products</h5>
+      
 
-         <div>
-            <label className="form-label">Title</label>
-            <input type="text" className="from-control" />
+      <div>
+        <label className="form-label">Title</label>
+        <input type="text" className="from-control" />
+      </div>
+
+      <div>
+        <label className="form-label">Price</label>
+        <input type="number" className="from-control" />
+      </div>
+
+      <div>
+        <label className="form-label">Image</label>
+        <input type="text" className="from-control" />
+      </div>
+
+      <div>
+        <label className="form-label">Category</label>
+        <input type="text" className="from-control" />
+      </div>
+
+      <div className="controls">
+        <button className="btn  btn-danger"></button>
+      </div>
+    </div>
+
+      <div className="cpns">
+        <h5>Manage Coupons</h5>
+
+        <div>
+          <label className="form-label">Code</label>
+          <input type="text" className="form-control" />
         </div>
 
         <div>
-            <label className="form-label">Price</label>
-            <input type="number" className="from-control" />
-        </div>
-        
-        <div>
-            <label className="form-label">Image</label>
-            <input type="text" className="from-control" />
-        </div>
-        
-        <div>
-            <label className="form-label">Category</label>
-            <input type="text" className="from-control" />
+          <label className="form-label">"Discount"</label>
+          <input type="number" className="form-control" />
         </div>
 
-        <div className="cpns">
-          <h5>Manage Coupons</h5>
-
-          <div>
-           <label className="form-label">Code</label>
-            <input type="text" className="form-control" />
-          </div>
-
-          <div>
-            <label className="form-label">"Discount"</label>
-            <input type="number" className="form-control" />
-          </div>
-
-          <div className="controls">
-            <button className="btn btn-dark">Save Coupon</button>
-          </div>
+        <div className="controls">
+          <button className="btn btn-success">Save Coupon</button>
         </div>
       </div>
-    
+
+    </div>
+  </div>
   );
 }
 

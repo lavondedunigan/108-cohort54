@@ -4,32 +4,35 @@
     justify-content: space-around;
     height: 60px;
     align-items: center;
-    background-color: rgb(29, 104, 136);
+    background-color: rgb(136, 29, 120);
+    border: #002244;
 }
 
 a{
     text-transform: uppercase;
     font-size: 18px;
-    color: rgb(23, 146, 111);
+    color: rgb(96, 110, 25);
     letter-spacing: 1px;
     font-weight: bolder;
     text-decoration: none;
     margin-right: 20px;
+    border: #66003f;
+    border-color: blue;
 }
 
 
 a:hover{
-    color: rgb(255, 0, 128);
+    color: rgb(81, 25, 73);
     font-size: 18px;
     text-decoration: underline;
     
 }
 
 .navbar-menu .title {
-    font-weight: bold;
+    font-weight: bolder;
     margin-right: 20px;
     margin-left: 10px;
-    font-size: 20;
+    font-size: 60;
 
 
 animation: neon 1s ease infinite;
@@ -39,11 +42,11 @@ animation: neon 1s ease infinite;
 @keyframes neon {
     0%,
     100% {
-        text-shadow: 0 0 10px #00a2ff, 0 0 20px #00a2ff, 0 0 20px #00a2ff, 0 0 20px #00a2ff, 0 0 2px #33ccff, 2px 2px 2px #1a3d66;
-        color: #cceeff;
+        text-shadow: 0 0 10px #af9029, 0 0 20px #00a2ff, 0 0 20px #00a2ff, 0 0 20px #00a2ff, 0 0 2px #33ccff, 2px 2px 2px #1a3d66;
+        color: #ffcce9;
     }
     50% {
-        text-shadow: 0 0 2px #003366, 0 0 5px #003366, 0 0 5px #003366, 0 0 5px #003366, 0 0 2px #0066cc, 4px 4px 2px #002244;
-        color: #99d6ff;
+        text-shadow: 0 0 2px #66003f, 0 0 5px #003366, 0 0 5px #003366, 0 0 5px #003366, 0 0 2px #0066cc, 4px 4px 2px #002244;
+        color: #8c642d;
     }
 }
