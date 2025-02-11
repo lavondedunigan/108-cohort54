@@ -10,47 +10,61 @@ const catalog = [
         _id: "1892389"
     },
     {
-        "title": "Lilac and Willow",
+        "title": "Rare Antique",
         "image": "/images/lilac and willow.jpg",
         "price": 24.670,
-        "category": "flowers",
-        _id: "344561"
+        "category": "vases",
+        _id: "344561x"
     },
     {
+
         "title": "Miracle Grow",
         "image": "/images/miracle grow.jpg",
         "price": 11.70,
-        "category": "plant food",
+        "category": "plant growth",
         _id: "hxckskc"
     },
     {
-        "title": "Lilly",
-        "image": "/images/lilly.jpg",
+        "title": "Miracle Gro",
+        "image": "/images/miracle grow.jpg",
         "price": 11.70,
-        "category": "flowers",
+        "category": "miracle grow",
         _id: "hxckskc"
     },
     {
-        "title": "Lilly",
-        "image": "/images/lilly.jpg",
+        "title": "Soil",
+        "image": "/images/.jpg",
         "price": 11.70,
-        "category": "flowers",
+        "category": "soil/dirt",
         _id: "hxckskc"
     },
     {
-        "title": "Lilly",
+        "title": "Melons",
+        "image": "/images/watermelon.jpg",
+        "price": 11.70,
+        "category": "seeds",
+        _id: "hxckskc"
+    },
+    {
+        "title": "Flower Pots",
         "image": "/images/lilly.jpg",
         "price": 11.70,
-        "category": "flowers",
+        "category": "garden pots",
+        _id: "hxckskc"
+    },
+    {  
+        "title": "Garden Shears",
+        "image": "/images/lilly.jpg",
+        "price": 11.70,
+        "category": "shears",
         _id: "hxckskc"
     }
-
 
 
 ];
 
 
-const categories = ["flowers","vases", "plant food", "miracle grow", "soil","seeds"];
+const categories = ["flowers","vases", "seed container", "miracle grow", "soil","seeds"];
 
 
 function Catalog() {

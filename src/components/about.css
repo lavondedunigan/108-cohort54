@@ -4,10 +4,12 @@
 }
 
 .about h1 {
-    color: rgb(105, 111, 83);
+    color: rgb(77, 61, 28);
 }
 
 .about h5 {
-    color: black;
-    font-family: "Segoe UI, sans-serif";
+    color: rgb(40, 33, 52);
+    font-family: Arial, Helvetica, sans-serif;   
+  
+
 }

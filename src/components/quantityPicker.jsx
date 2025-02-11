@@ -21,9 +21,9 @@ function QuantityPicker() {
     return ( 
         <div className="qt-picker">
 
-        <button className="btn btn-sm btn-outline btn-primary"   disabled={quantity == 1} onClick={decrease}> - </button>
+        <button className="btn btn-sm btn-outline btn-warning"   disabled={quantity == 1} onClick={decrease}> - </button>
         <label>{quantity}</label>
-        <button className="btn btn-sm btn-outline" onClick={increase}> + </button>
+        <button className="btn btn-sm btn-info" onClick={increase}> + </button>
 
         </div>
     );

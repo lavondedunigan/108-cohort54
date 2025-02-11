@@ -1,16 +1,16 @@
 .admin {
-    padding-top: 10px;
+    padding-top: 25px;
 }
 
 .admin h1 {
-    color: rgb(155, 121, 96);
+    color: rgb(79, 15, 15);
 }
 
 .admin .prods,
 .admin .cpns {
-    border: 1px solid #231ea1;
+    border: 1px solid #1d2174;
     border-radius: 4px;
-    background-color: #191317;
+    background-color: #275958;
     padding: 20px;
     text-align: left;
 }
@@ -20,7 +20,7 @@
 }
 
 .admin label {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .admin .parent {

@@ -2,7 +2,8 @@ import"./products.css";
 import QuantityPicker from "./quantityPicker";
 
 function Product(props) {
-
+    console.log("props... ", props);
+    
 
     function add() {
         console.log("clicked")
