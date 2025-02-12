@@ -19,6 +19,8 @@ function Product(props) {
 
             <label>{props.data.price}</label>
 
+
+
             <div className= "controls">
             <QuantityPicker></QuantityPicker>
 

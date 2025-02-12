@@ -17,7 +17,7 @@ a{
     text-decoration: none;
     margin-right: 20px;
     border: #66003f;
-    border-color: blue;
+    border-color:darkgreen;
 }
 
 
@@ -35,14 +35,17 @@ a:hover{
     font-size: 60;
 
 
-animation: neon 1s ease infinite;
-
-
+    animation: neon 1s ease infinite;
 }
+
+.navbar-menu .end {
+    margin-left: auto;
+}
+
 @keyframes neon {
     0%,
     100% {
-        text-shadow: 0 0 10px #af9029, 0 0 20px #00a2ff, 0 0 20px #00a2ff, 0 0 20px #00a2ff, 0 0 2px #33ccff, 2px 2px 2px #1a3d66;
+        text-shadow: 0 0 10px #af9022, 0 0 20px #00a2ff, 0 0 20px #00a2ff, 0 0 20px #00a2ff, 0 0 2px #33ccff, 2px 2px 2px #1a3d66;
         color: #ffcce9;
     }
     50% {

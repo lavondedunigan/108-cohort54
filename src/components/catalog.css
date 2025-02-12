@@ -1,6 +1,13 @@
+.catalog {
+    padding-top: 10px;
+}
 
+.catalog h1 {
+    color:brown;
+}
 .catalog .filters {
     margin-bottom: 20px;
+    margin-top: 12px;
 }
 
 .catalog .filters button {

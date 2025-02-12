@@ -1,0 +1,25 @@
+
+.home {
+    position:relative
+}
+
+.home h1 {
+    color:darkgreen(139, 0, 100);
+    text-align: center;
+}
+
+.home img {
+    width: 65%;
+    
+}
+
+.home info {
+    position: absolute;
+    top: 40%;
+    right: 17%;
+    width: 500px;
+    border: 1px solid #c5b631;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: lawngreen;
+}

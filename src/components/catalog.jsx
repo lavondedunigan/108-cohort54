@@ -1,5 +1,6 @@
+import { startTransition } from "react";
 import "./catalog.css";
-import Product from "./products";
+import Product from "./products.jsx";
 
 const catalog = [
     {
@@ -11,17 +12,17 @@ const catalog = [
     },
     {
         "title": "Rare Antique",
-        "image": "/images/lilac and willow.jpg",
+        "image": "/images/rare antique.jpg",
         "price": 24.670,
         "category": "vases",
         _id: "344561x"
     },
     {
 
-        "title": "Miracle Grow",
-        "image": "/images/miracle grow.jpg",
+        "title": "Seed Containers",
+        "image": "/images/containers.jpg",
         "price": 11.70,
-        "category": "plant growth",
+        "category": "small containers",
         _id: "hxckskc"
     },
     {
@@ -33,7 +34,7 @@ const catalog = [
     },
     {
         "title": "Soil",
-        "image": "/images/.jpg",
+        "image": "/images/soil.jpg",
         "price": 11.70,
         "category": "soil/dirt",
         _id: "hxckskc"
@@ -42,19 +43,19 @@ const catalog = [
         "title": "Melons",
         "image": "/images/watermelon.jpg",
         "price": 11.70,
-        "category": "seeds",
+        "category": "melon seeds",
         _id: "hxckskc"
     },
     {
         "title": "Flower Pots",
-        "image": "/images/lilly.jpg",
+        "image": "/images/mexican pottery.jpg",
         "price": 11.70,
         "category": "garden pots",
         _id: "hxckskc"
     },
     {  
         "title": "Garden Shears",
-        "image": "/images/lilly.jpg",
+        "image": "/images/garden shears.jpg",
         "price": 11.70,
         "category": "shears",
         _id: "hxckskc"
@@ -64,16 +65,17 @@ const catalog = [
 ];
 
 
-const categories = ["flowers","vases", "seed container", "miracle grow", "soil","seeds"];
+const categories = ["flowers","vases", "seed container", "miracle grow", "soil", "seeds", "flower pots","garden shears"];
 
 
 function Catalog() {
     return (
         <div className="catalog page">
-            <h1>Check our flowers and products.</h1>
+            <h1>Check out our flowers and products.</h1>
 
             <div className="filters">
-                {categories.map(cat => <button className="btn btn-sm btn-outline-success">{cat}</button> ) }
+                {categories.map(cat => <button className="btn btn-sm btn-outline-success
+                ">{cat}</button> ) }
             </div>
             
 

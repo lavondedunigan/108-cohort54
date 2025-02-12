@@ -1,16 +1,16 @@
 
 .product {
-    border: 1px solid #c5b631;
+    border: 1px solid #c58a31;
     border-radius: 4px;
     margin-bottom: 10px;
     margin-right: 10px; 
-    background-color: rgb(28, 148, 56);
+    background-color:lightgrey;
 
 
-    width: 140px;
-    height: 220px;
+    width: 220px;
+    height: 350px;
     display: inline-block;
-    padding: 25px;
+    padding: 10px;
     vertical-align: top;
 }
 
@@ -21,4 +21,5 @@
 
 .product img {
     width: 200px;
+    height: 220px;
 }
