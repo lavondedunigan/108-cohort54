@@ -72,11 +72,13 @@ function Catalog() {
     return (
         <div className="catalog page">
             <h1>Check out our flowers and products.</h1>
+           
 
             <div className="filters">
                 {categories.map(cat => <button className="btn btn-sm btn-outline-success
                 ">{cat}</button> ) }
             </div>
+            
             
 
         
