@@ -1,6 +1,6 @@
 import "./home.css";
 
-<images></images>
+
 
 function Home () {
     return (
