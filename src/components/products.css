@@ -1,14 +1,14 @@
 
 .product {
-    border: 1px solid #c58a31;
+    border:black;
     border-radius: 4px;
     margin-bottom: 10px;
     margin-right: 10px; 
     background-color:lightgrey;
 
 
-    width: 220px;
-    height: 350px;
+    width: 200px;
+    height: 250px;
     display: inline-block;
     padding: 10px;
     vertical-align: top;
@@ -20,8 +20,8 @@
 }
 
 .product img {
-    width: 200px;
-    height: 220px;
+    width: 100px;
+    height: 120px;
 }
 
 .product .prices {
@@ -30,11 +30,18 @@
 }
 
 .product .prices .total {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 600;
-    color: tomato;
+    color: #4c3143;
 }
 
 .produce .price .price {
-    color: #626568;
+    color:#686262;
+}
+ 
+.product i {
+    color: #4c3143;
+    font-size: 20px;
+    color:white !important;
+    cursor: pointer;
 }

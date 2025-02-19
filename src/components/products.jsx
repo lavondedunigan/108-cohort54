@@ -1,20 +1,33 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import react from "react";
 import"./products.css";
 import QuantityPicker from "./quantityPicker";
+import DataContext from "../state/dataContext";
 
 function Product(props) {
     const [quantity, setQuantity] = useState(1);
-    console.log("props... ", props);
+    const addProductToCart = useContext(DataContext).addProductToCart;
     
+
     function add() {
-        console.log("clicked");
+        /**
+        * create a new object (prodForCart)
+        * should have everything that props.data contains
+        * and should also have quantity
+        * 
+        * send that obj to the global add
+        */
+        let prodForCart = {
+            ...props.data,
+            quantity: quantity
+        };
+
+        addProductToCart(prodForCart); // the global fn
     }
     function handleQuantity(qty) {
         console.log("quantity changed", qty);
         setQuantity(qty);
     }
-
 
     return (
         <div className="product">
@@ -31,8 +44,11 @@ function Product(props) {
         <div className= "controls">
             <QuantityPicker onChange={handleQuantity}></QuantityPicker>
 
-            <button onClick={add} className="btn btn-sm btn info">Add</button>
-                <i class="i= add fa-solid fa-cart-plus"></i>
+            <button onClick={add} className="btn btn-sm btn info">
+                <i class="fa-solid fa-cart-plus"></i>
+                Add
+            </button>
+                
         </div>  
     </div>    
     );

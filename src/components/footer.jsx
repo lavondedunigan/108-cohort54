@@ -4,7 +4,7 @@ import "./footer.css";
 function Footer() {
     return(
         <div className="footer">
-            <h4> Created by: LaVonde Dunigan</h4>
+            <h4> Created by: LaVonde Dunigan Inc 2025</h4>
         </div>
     );
 }

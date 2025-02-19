@@ -6,7 +6,26 @@ import DataContext from "../state/dataContext";
 
 function Navbar() {
 
-    const user = useContext(DataContext).user
+    const user = useContext(DataContext).user;
+    const cart = useContext(DataContext).cart;
+
+    function getProdsInCart() {
+      let sum = 0;
+
+      for (let i = 0; i < cart.length; i++) {
+        let prod = cart[i];
+        sum += prod.quantity;
+        }
+      }
+
+
+      return sum;
+    
+    }
+
+    function getUserOptions() {
+
+      }
 
   return (
     <div>
@@ -17,18 +36,16 @@ function Navbar() {
           <Link to="catalog">Catalog</Link>
           <Link to="about">About</Link>
           <Link to="admin">Admin</Link>
-          <Link to="/cart">Cart</Link>
+        
 
-          <Link className="end" to="/cart">View Cart</Link>
-          <a className="user-info" href="#">
-              <i class="i=user fa solid fa-circle-user"></i>
-              {user.name}
-            </a>
+          <Link className="end" to="/cart">
+            <span class="badge rounded-pill text-bg-success">Success</span>
+          </Link> 
         </div>
       </nav>
     </div>
   );
-}
+
 
 export default Navbar;
 
@@ -43,3 +60,4 @@ export default Navbar;
  * render About below <Catalog>
  *
  */
+

@@ -2,16 +2,21 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Catalog from "./components/catalog";
+import About from "./components/about";
+import Admin from "./components/admin";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import About from "./components/about";
-import Admin from "./components/admin";
-import Home from "./components/home";
-import Cart from "./components/cart";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "@fortawesome/fontawesome-free/js/all.js";
+
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/home";
+import Cart from "./components/cart";
 import  GlobalStateProvider from "./state/globalProvider";
+
 
 function App() {
   return (

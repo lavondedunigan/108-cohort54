@@ -1,15 +1,22 @@
 import { useState } from "react";
 import DataContext from "./dataContext";
 
-function GlobalStateProvider (props){
+function GlobalProvider (props) {
     const [cart, setCart] = useState([]);
     const [user, setUser] = useState({ name: "Vonda"});
 
     function addProductToCart(product) {
+      console.log("Global add");
+
+      //3 steps to push product into the cart array
+      
+      let copy = [...cart];
+      copy.push(product);    
+      setCart(copy);
     }
 
     function removeProductFromCart(product) {
-    }
+    } 
 
     function clearCart() {
     }
@@ -21,11 +28,17 @@ function GlobalStateProvider (props){
         addProductToCart: addProductToCart, 
         removeProductFromCart: removeProductFromCart,
         clearCart: clearCart
-     
       }}>
         {props.children}
       </DataContext.Provider>
     )
 
-}
-export default GlobalStateProvider;
+}   
+
+
+    
+
+    
+
+
+export default GlobalProvider;

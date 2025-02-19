@@ -9,7 +9,7 @@
 }
 
 .home img {
-    width: 65%;
+    width: 600px;
     
 }
 
@@ -17,9 +17,9 @@
     position: absolute;
     top: 40%;
     right: 17%;
-    width: 500px;
-    border: 1px solid #c5b631;
+    width: 800px;
+    border:darkkhaki;
     border-radius: 12px;
     padding: 15px;
-    background-color: lawngreen;
+    background-color:hotpink;
 }
