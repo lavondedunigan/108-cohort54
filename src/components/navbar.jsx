@@ -1,31 +1,43 @@
 import { useContext } from "react";
 import "./navbar.css";
-
 import { Link } from "react-router-dom";
 import DataContext from "../state/dataContext";
 
+
 function Navbar() {
-
-    const user = useContext(DataContext).user;
-    const cart = useContext(DataContext).cart;
-
-    function getProdsInCart() {
-      let sum = 0;
-
-      for (let i = 0; i < cart.length; i++) {
-        let prod = cart[i];
-        sum += prod.quantity;
-        }
-      }
+  const user = useContext(DataContext).user;
+  const cart = useContext(DataContext).cart;
 
 
-      return sum;
-    
+  // calculates the number of products in the cart
+  function getProdsInCart() {
+    let sum = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+      let prod = cart[i];
+      sum += prod.quantity;
     }
 
-    function getUserOptions() {
+    return sum;
+  }
 
-      }
+function getUserOptions() {
+  if (user.name === "Guest") {  
+    return (
+      <div className="user-options">
+        <a href="#login">Login</a>
+        <a href="#register">Register</a>
+      </div>
+    );
+  }
+
+  return (
+    <div className="user-options">
+      <a href="#logout">Logout</a>
+    </div>
+  );
+}
+
 
   return (
     <div>
@@ -36,16 +48,24 @@ function Navbar() {
           <Link to="catalog">Catalog</Link>
           <Link to="about">About</Link>
           <Link to="admin">Admin</Link>
-        
 
-          <Link className="end" to="/cart">
-            <span class="badge rounded-pill text-bg-success">Success</span>
-          </Link> 
+        <Link className="end" to="/cart">
+            <span className="badge text-bg-light">{getProdsInCart()}</span>
+            View Cart
+        </Link>
+
+
+        <a className="user-info" href="#">
+          <i class="i-user fa-solid fa-circle-user"></i>
+          {user.name}
+        </a>
+
+        {getUserOptions()}
         </div>
       </nav>
     </div>
   );
-
+}
 
 export default Navbar;
 
@@ -61,3 +81,15 @@ export default Navbar;
  *
  */
 
+/** 
+ * in Cart page:
+ * render a H3 with something like:
+ * We have X products of products.
+ * 
+ * Where X is the number of products.
+ * 
+ * 
+ * Connect to the context { remember 2 imports}
+ * 
+ * 
+ */

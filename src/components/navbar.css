@@ -4,13 +4,13 @@
     justify-content: space-around;
     height: 60px;
     align-items: center;
-    background-color:;
+    background-color: #66003f;
     border: #002244;
 }
 
 a{
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     color: rgb(96, 110, 25);
     letter-spacing: 1px;
     font-weight: bolder;
@@ -58,4 +58,14 @@ a:hover{
     border: 1px solid floralwhite;
     border-radius: 4px;
     padding: 7px;
+}
+
+.navbar-menu .i-user {
+    margin-right: 3px;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar-menu .badge {
+    margin-right: 3px;
 }

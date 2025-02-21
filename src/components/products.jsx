@@ -22,7 +22,7 @@ function Product(props) {
             quantity: quantity
         };
 
-        addProductToCart(prodForCart); // the global fn
+        addProductToCart(prodForCart); 
     }
     function handleQuantity(qty) {
         console.log("quantity changed", qty);
