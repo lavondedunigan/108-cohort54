@@ -21,22 +21,7 @@ function Navbar() {
     return sum;
   }
 
-function getUserOptions() {
-  if (user.name === "Guest") {  
-    return (
-      <div className="user-options">
-        <a href="#login">Login</a>
-        <a href="#register">Register</a>
-      </div>
-    );
-  }
 
-  return (
-    <div className="user-options">
-      <a href="#logout">Logout</a>
-    </div>
-  );
-}
 
 
   return (
@@ -60,7 +45,9 @@ function getUserOptions() {
           {user.name}
         </a>
 
-        {getUserOptions()}
+                          
+
+       
         </div>
       </nav>
     </div>

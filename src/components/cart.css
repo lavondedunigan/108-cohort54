@@ -5,8 +5,8 @@
     background-color: #f9f9f9;
     border-radius: 4px;
     margin: 20px;
-    width: 300px;
-    display: inline-block;
+    width: 600px;
+    display: list-item;
     vertical-align: top;
 }
 
@@ -25,17 +25,17 @@
 }
 
 .cart .product {
-    flex: 3;
+    flex: 1;
 }
 
 .cart .size-menu {
-    flex: 1;
+    flex: 2;
 }
 .cart .prod-in-cart{
     display: flex;
     align-items: center;
-    border: 1px soliid #6a6a6a;
-    background-color: white;
+    border:1px solid  darkblue;
+    background-color: bisque;
     margin-bottom: 12px;  
 }
  .cart .product-in-cart img {

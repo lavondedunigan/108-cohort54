@@ -6,14 +6,14 @@ const catalog = [
     {
         "title": "Lavender",
         "image": "/images/lavender.jpg",
-        "price": 44.90,
+        "price": 12.50,
         "category": "flowers",
         _id: "1892389"
     },
     {
         "title": "Rare Antique",
         "image": "/images/rare antique.jpg",
-        "price": 24.670,
+        "price": 48.80,
         "category": "vases",
         _id: "344561x"
     },
@@ -21,42 +21,42 @@ const catalog = [
 
         "title": "Seed Containers",
         "image": "/images/containers.jpg",
-        "price": 11.70,
+        "price": 15.20,
         "category": "small containers",
         _id: "hxckskc"
     },
     {
         "title": "Miracle Gro",
         "image": "/images/miracle grow.jpg",
-        "price": 11.70,
+        "price": 18.50,
         "category": "miracle grow",
         _id: "hxckskc"
     },
     {
         "title": "Soil",
         "image": "/images/soil.jpg",
-        "price": 11.70,
+        "price": 15.00,
         "category": "soil/dirt",
         _id: "hxckskc"
     },
     {
         "title": "Melons",
         "image": "/images/watermelon.jpg",
-        "price": 11.70,
+        "price": 9.80,
         "category": "melon seeds",
         _id: "hxckskc"
     },
     {
         "title": "Flower Pots",
         "image": "/images/mexican pottery.jpg",
-        "price": 11.70,
+        "price": 44.90,
         "category": "garden pots",
         _id: "hxckskc"
     },
     {  
         "title": "Garden Shears",
         "image": "/images/garden shears.jpg",
-        "price": 11.70,
+        "price": 22.70,
         "category": "shears",
         _id: "hxckskc"
     }
