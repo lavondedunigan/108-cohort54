@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./admin.css";
+import dataService from "../service/dataService";
 
 function Admin() {  
   const [allCoupons, setAllCoupons] = useState([]);
@@ -37,12 +38,15 @@ function Admin() {
     let copy = { ...coupon };
     copy[name] = text;
     setCoupon(copy);
-  }
 
-  
+  }
 
   function saveCoupon() {
     console.log(coupon);
+
+    let valid = {...coupon};
+    valid.discount = parseFloat(valid.discount);
+    dataService.saveCoupon(valid);
 
     let copy = [...allCoupons];
     copy.push(coupon);
@@ -59,20 +63,44 @@ function Admin() {
   function handleProduct(e) {
     const text = e.target.value;
     const name = e.target.name;
-    
+
+  
     let copy = { ...product };
     copy[name] = text;
     setProduct(copy);
   }
 
-
-  function saveProduct() {
+  async function saveProduct() {
     console.log(product);
+    
 
-    let copy = [...allProducts];  
+    let validProd = {...setProduct};  
+    validProd.price = parseFloat(validProd.price);
+    let saveProd = await dataService.saveProduct(validProd);
+    console.log(saveProd);
+
+    let copy = [...allProducts];
     copy.push(product);
     setAllProducts(copy);
   }
+
+
+  async function loadProducts() {
+    let data = await dataService.getProducts();
+    setAllProducts(data);
+  }
+  
+
+  async function loadCoupons() {
+    let data = await dataService.loadCoupons();
+    setAllCoupons(data);
+  }
+
+
+  useEffect(() => {
+    loadProducts();
+    loadCoupons();
+  }, []);
 
   return (
     <div className="admin page">
@@ -137,7 +165,7 @@ function Admin() {
             <input
               type="text"
               className="form-control"
-              onBlur={handleProduct}
+              onBlur={handleCoupon}
               name="product"
             />
           </div>
@@ -148,7 +176,7 @@ function Admin() {
             </button>
             <button className="btn btn-danger">Delete Coupon</button>
             <button className="btn btn-warning">Clear</button>
-            <button className="btn btn-primary">List Coupons</button>
+            <button className="btn btn-primary">Total Coupons</button>
           </div>
 
           {allCoupons.map(coupon => <li>{coupon.code} - {coupon.discount}%</li>)}
@@ -159,3 +187,9 @@ function Admin() {
 }
 
 export default Admin;
+
+/**
+ * when the page load, call a function 
+ * the function should use the DataService to get the prods from the server
+ * put the prods on the allProducts state variable
+ */

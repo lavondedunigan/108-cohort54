@@ -1,7 +1,7 @@
-import { startTransition } from "react";
+import { useEffect, useState } from "react";
 import "./catalog.css";
-import Product from "./products.jsx";
-
+import Product from "../components/products";
+import DataService from "../service/dataService";
 const catalog = [
     {
         "title": "Lavender",
@@ -69,10 +69,22 @@ const categories = ["flowers","vases", "seed container", "miracle grow", "soil",
 
 
 function Catalog() {
+    const [allProducts, setAllProducts] = useState([]);
+    
+    async function loadProducts() {
+        const data = await DataService.getProducts();
+        setAllProducts(data);
+    
+    }
+
+    useEffect(() => {
+        // when the component loads
+        loadProducts(); 
+    }, []);  
+   
     return (
         <div className="catalog page">
             <h1>Check out our flowers and products.</h1>
-           
 
             <div className="filters">
                 {categories.map(cat => <button className="btn btn-sm btn-outline-success
@@ -80,9 +92,7 @@ function Catalog() {
             </div>
             
             
-
-        
-            {catalog.map(prod => <Product data={prod} /> ) }
+            {allProducts.map(prod => <Product data={prod} /> ) }
         </div>
         
         

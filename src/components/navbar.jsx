@@ -28,7 +28,7 @@ function Navbar() {
     <div>
       <nav id="test">
         <div className="navbar-menu">
-          <span className="title">Organika</span>
+          <span className="title">Garden Heaven</span>
           <Link to="./home">Home</Link>
           <Link to="catalog">Catalog</Link>
           <Link to="about">About</Link>

@@ -3,12 +3,12 @@
 }
 
 .admin h1 {
-    color: rgb(79, 15, 15);
+    color: rgb(38, 12, 24);
 }
 
 .admin .prods,
 .admin .cpns {
-    border: 1px solid #1d2174;
+    border: 1px solid #741d47;
     border-radius: 4px;
     background-color: #275958;
     padding: 20px;
