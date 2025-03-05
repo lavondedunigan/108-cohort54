@@ -14,14 +14,14 @@ class DataService {
     }
 
     async loadCoupons() {
-        let response = await axios.get("http://127.0.0.1:5000/api/coupons",);
+        let response = await axios.get("http://127.0.0.1:5000/api/coupons");
         return response.data;
     }
 
     async saveCoupon(coupon) {
-        let response = await axios.post("http://127.0.0.1:5000/api/coupons",coupon)
+        let response = await axios.post("http://127.0.0.1:5000/api/coupons", coupon);
         return response.data;
-}  
+    }  
 }
 
 export default new DataService();

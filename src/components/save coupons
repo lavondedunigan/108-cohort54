@@ -1,0 +1,9 @@
+Save Coupons
+
+
+- create the function on the data service
+
+- on admin
+- on the saveCoupon fn
+- fix the discount to be a float
+- get the coupon to the dataService fn

@@ -77,8 +77,7 @@ function Catalog() {
     
     }
 
-    useEffect(() => {
-        // when the component loads
+    useEffect(function() {
         loadProducts(); 
     }, []);  
    
@@ -87,8 +86,7 @@ function Catalog() {
             <h1>Check out our flowers and products.</h1>
 
             <div className="filters">
-                {categories.map(cat => <button className="btn btn-sm btn-outline-success
-                ">{cat}</button> ) }
+                {categories.map(cat => <button className="btn btn-sm btn-outline-success">{cat}</button> ) }
             </div>
             
             

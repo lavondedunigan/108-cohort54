@@ -35,7 +35,7 @@ function Admin() {
 
     
 
-    let copy = { ...coupon };
+    let copy = {...coupon};
     copy[name] = text;
     setCoupon(copy);
 
@@ -44,9 +44,9 @@ function Admin() {
   function saveCoupon() {
     console.log(coupon);
 
-    let valid = {...coupon};
-    valid.discount = parseFloat(valid.discount);
-    dataService.saveCoupon(valid);
+    const validCoupon = {...coupon};
+    validCoupon.discount = parseFloat(validCoupon.discount);
+    dataService.saveCoupon(validCoupon);
 
     let copy = [...allCoupons];
     copy.push(coupon);
@@ -75,7 +75,7 @@ function Admin() {
     
 
     let validProd = {...setProduct};  
-    validProd.price = parseFloat(validProd.price);
+    validProd.price = parseFloat(validProd.price); // parse str into a float
     let saveProd = await dataService.saveProduct(validProd);
     console.log(saveProd);
 
@@ -92,12 +92,13 @@ function Admin() {
   
 
   async function loadCoupons() {
-    let data = await dataService.loadCoupons();
+    let data = await dataService.getCoupons();
     setAllCoupons(data);
   }
 
 
-  useEffect(() => {
+  useEffect(function() {
+    // when the component loads
     loadProducts();
     loadCoupons();
   }, []);
@@ -181,7 +182,9 @@ function Admin() {
 
           {allCoupons.map(coupon => <li>{coupon.code} - {coupon.discount}%</li>)}
         </div>
+
       </div>
+
     </div>
   );
 }
